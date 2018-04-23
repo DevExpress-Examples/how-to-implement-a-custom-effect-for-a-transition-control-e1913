@@ -1,0 +1,87 @@
+﻿<UserControl xmlns:core="clr-namespace:DevExpress.Xpf.Core;assembly=DevExpress.Xpf.Core.v10.1" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="TransitionControl_CustomEffect.MainPage" mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <DataTemplate x:Key="r0">
+                <Rectangle Fill="Red" Stroke="Black" StrokeThickness="3" Width="150" Height="150" RadiusX="5" RadiusY="5" />
+            </DataTemplate>
+            <DataTemplate x:Key="r1">
+                <Rectangle Fill="Yellow" Stroke="Black" StrokeThickness="3" Width="100" Height="100" RadiusX="5" RadiusY="5" />
+            </DataTemplate>
+            <DataTemplate x:Key="r2">
+                <Rectangle Fill="Blue" Stroke="Black" StrokeThickness="3" Width="50" Height="50" RadiusX="5" RadiusY="5" />
+            </DataTemplate>
+        </Grid.Resources>
+        <core:TransitionControl MouseLeftButtonUp="trControl_MouseLeftButtonUp" x:Name="trControl" TransitionStyle="Fly" Width="400" Height="250">
+            <core:TransitionControl.PreviousControlTemplate>
+                <ControlTemplate TargetType="core:TransitionContentControl">
+                    <ContentPresenter x:Name="ContentPresenter" RenderTransformOrigin="0.5,0.5">
+                        <ContentPresenter.Projection>
+                            <PlaneProjection x:Name="planeProjection" RotationX="0" />
+                        </ContentPresenter.Projection>
+                        <ContentPresenter.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform x:Name="scale" />
+                            </TransformGroup>
+                        </ContentPresenter.RenderTransform>
+                        <ContentPresenter.Resources>
+                            <Storyboard x:Name="TransitionStory">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentPresenter">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.4" Value="1" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.6" Value="0" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.2" Value="0.7" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.2" Value="0.7" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.5" Storyboard.TargetName="planeProjection" Storyboard.TargetProperty="PlaneProjection.RotationX" From="0" To="-720">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </ContentPresenter.Resources>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </core:TransitionControl.PreviousControlTemplate>
+            <core:TransitionControl.ControlTemplate>
+                <ControlTemplate TargetType="core:TransitionContentControl">
+                    <ContentPresenter x:Name="ContentPresenter" RenderTransformOrigin="0.5,0.5">
+                        <ContentPresenter.Projection>
+                            <PlaneProjection x:Name="planeProjection" RotationX="0" />
+                        </ContentPresenter.Projection>
+                        <ContentPresenter.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform x:Name="scale" />
+                            </TransformGroup>
+                        </ContentPresenter.RenderTransform>
+                        <ContentPresenter.Resources>
+                            <Storyboard x:Name="TransitionStory">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentPresenter">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.4" Value="0" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.6" Value="1" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.7" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.8" Value="0.7" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.7" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:0.8" Value="0.7" />
+                                    <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimation BeginTime="00:00:00.49" Duration="00:00:00.5" Storyboard.TargetName="planeProjection" Storyboard.TargetProperty="PlaneProjection.RotationX" From="-720" To="0">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </ContentPresenter.Resources>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </core:TransitionControl.ControlTemplate>
+        </core:TransitionControl>
+    </Grid>
+</UserControl>
