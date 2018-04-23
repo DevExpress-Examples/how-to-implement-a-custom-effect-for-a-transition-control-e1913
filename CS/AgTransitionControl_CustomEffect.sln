@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgTransitionControl_CustomEffect", "AgTransitionControl_CustomEffect\AgTransitionControl_CustomEffect.csproj", "{FCD7F1FD-6EB7-44CC-A24B-B5D2278249CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCD7F1FD-6EB7-44CC-A24B-B5D2278249CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD7F1FD-6EB7-44CC-A24B-B5D2278249CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD7F1FD-6EB7-44CC-A24B-B5D2278249CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD7F1FD-6EB7-44CC-A24B-B5D2278249CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
