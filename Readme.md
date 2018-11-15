@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainPage.xaml](./CS/AgTransitionControl_CustomEffect/MainPage.xaml)
+* [MainPage.xaml.cs](./CS/AgTransitionControl_CustomEffect/MainPage.xaml.cs)
+<!-- default file list end -->
 # How to Implement a Custom Effect for a Transition Control
 
 
