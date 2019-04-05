@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [MainPage.xaml](./CS/AgTransitionControl_CustomEffect/MainPage.xaml) (VB: [MainPage.xaml](./VB/AgTransitionControl_CustomEffect/MainPage.xaml))
-* [MainPage.xaml.cs](./CS/AgTransitionControl_CustomEffect/MainPage.xaml.cs) (VB: [MainPage.xaml](./VB/AgTransitionControl_CustomEffect/MainPage.xaml))
+* [MainPage.xaml.cs](./CS/AgTransitionControl_CustomEffect/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/AgTransitionControl_CustomEffect/MainPage.xaml.vb))
 <!-- default file list end -->
 # How to Implement a Custom Effect for a Transition Control
 
